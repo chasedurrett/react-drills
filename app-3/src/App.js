@@ -6,29 +6,29 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      userInput: "",
-      snakes: ["bill", "bob", "borsty", "slicky", "slappy"],
+      filteredStr: "",
+      robots: ["zuck", "zamboni", "zales", "elon", "embroski"],
     };
   }
 
-  change(val) {
+  handleChange(val) {
     this.setState({
-      userInput: val,
+      filteredStr: val,
     });
   }
 
   render() {
-    let filteredSnakes = this.state.snakes
+    let filteredRobots = this.state.robots
       .filter((element) => {
-        return element.includes(this.state.userInput);
+        return element.includes(this.state.filteredStr);
       })
       .map((element) => {
         return <h2>{element}</h2>;
       });
     return (
-      <div className="App">
-        <input onChange={(e) => this.change(e.target.value)} />
-        {filteredSnakes}
+      <div>
+        <input onChange={(e) => this.handleChange(e.target.value)} />
+        {filteredRobots}
       </div>
     );
   }

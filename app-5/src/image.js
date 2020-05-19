@@ -1,12 +1,9 @@
-import React, { Componenet, Component } from "react";
+import React, { Component } from "react";
 
 class Image extends Component {
   render() {
-    return (
-      <div>
-        <img src={this.props.url}></img>
-      </div>
-    );
+    const { url } = this.props;
+    return <img src={url}></img>;
   }
 }
 

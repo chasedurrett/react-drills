@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
-class TypeText extends Component {
+class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -10,7 +9,7 @@ class TypeText extends Component {
     };
   }
 
-  updateText(val) {
+  handleChange(val) {
     this.setState({
       message: val,
     });
@@ -18,12 +17,11 @@ class TypeText extends Component {
 
   render() {
     return (
-      <div className="App">
-        <input onChange={(e) => this.updateText(e.target.value)} />
+      <div>
+        <input onChange={(e) => this.handleChange(e.target.value)} />
         <p>{this.state.message}</p>
       </div>
     );
   }
 }
-
-export default TypeText;
+export default App;

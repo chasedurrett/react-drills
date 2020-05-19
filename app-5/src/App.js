@@ -6,15 +6,14 @@ import Image from "./image";
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <Image
           url={
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTKZq0f5FwGwED2YY4l10FPBGxlbTSgOkICyowwyVwxYZD_5dCi&usqp=CAU"
+            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.FM271U68IGLjU_REgAUVmgHaD4%26pid%3DApi&f=1"
           }
         />
       </div>
     );
   }
 }
-
 export default App;

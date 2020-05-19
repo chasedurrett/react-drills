@@ -6,15 +6,18 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      robots: ["joe", "byork", "tundi", "billyboe"],
+      animals: ["tiger", "lion", "elephant"],
     };
   }
-
   render() {
-    let robots = this.state.robots.map((element, index) => {
-      return <h2>{element}</h2>;
+    let animalList = this.state.animals.map((element, index) => {
+      return (
+        <h2>
+          {index} {element}
+        </h2>
+      );
     });
-    return <div className="App">{robots}</div>;
+    return <div>{animalList}</div>;
   }
 }
 
